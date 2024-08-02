@@ -35,3 +35,28 @@ Colab File: Use the provided Colab notebook to train the YOLOv9 model with your 
 5. Evaluate and Use the Model
 After training, you can evaluate the model's performance and use it for inference on new images. Detailed instructions are included in the Colab notebook.
 
+data Storage format 
+traffic-sign-detection/
+│
+├── data/
+│   ├── train/
+│   │   ├── images/
+│   │   └── labels/
+│   ├── val/
+│   │   ├── images/
+│   │   └── labels/
+│   └── test/
+│       ├── images/
+│       └── labels/
+│   └── data.yaml
+
+update data.yaml file with path of individual image folder 
+example of my data.yaml file 
+
+train: /content/drive/MyDrive/Data_set/yolo_normal/train/images
+val: /content/drive/MyDrive/Data_set/yolo_normal/valid/images
+test: /content/drive/MyDrive/Data_set/yolo_normal/test/images
+
+nc: 6
+names: ['100-kmph', '30 kmph', '50 kmph', '60 kmph', '80-kmph', 'pedestrian crossing']
+
